@@ -1,0 +1,41 @@
+<div class="administrators-container">
+  <div class="admin-title">
+    <h1 class="text-title">Administrators </h1>
+    <button 
+      pButton 
+      type="button"
+      label="Create administrator"
+    ></button>
+  </div>
+  <div>
+    <p-table
+      [value]="admins"
+      responsiveLayout="scroll"
+    >
+      <ng-template pTemplate="header" class="admin-table">
+          <tr>
+              <th>NAME</th>
+              <th>USERNAME</th>
+              <th>EMAIL</th>
+              <th>ROLE</th>
+              <th>ACTIONS</th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-admin>
+          <tr>
+              <td>{{admin?.name}}</td>
+              <td>{{admin?.username}}</td>
+              <td>{{admin?.email}}</td>
+              <td>{{admin?.role}}</td>
+              <td class="template-button">
+                <button pButton>view</button>
+                <button pButton>view</button>
+                <button pButton>view</button>
+              </td>
+          </tr>
+      </ng-template>
+  </p-table>
+  
+  </div>
+  
+</div>
