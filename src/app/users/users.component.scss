@@ -1,0 +1,21 @@
+.users-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 50%);
+  background-color: #fff;
+  color: #212120;
+  font-size: 14px;
+  margin-top: 20px;
+  padding: 20px;
+}
+.text-title {
+  color: #271962;
+  font-size: 20px;
+}
+.user-title {
+  display: flex;
+  justify-content: space-between;
+}
