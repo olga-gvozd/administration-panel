@@ -1,4 +1,4 @@
-.roles-container {
+.about-container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -7,15 +7,11 @@
   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 50%);
   background-color: #fff;
   color: #212120;
-  font-size: 14px;
+  font-size: 50px;
   margin-top: 20px;
   padding: 20px;
 }
-.text-title {
+.title {
   color: #271962;
   font-size: 20px;
-}
-.roles-title {
-  display: flex;
-  justify-content: space-between;
 }

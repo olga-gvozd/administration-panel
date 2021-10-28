@@ -1,0 +1,48 @@
+<div class="roles-container">
+  <div class="title">
+    <h1 class="text">Roles </h1>
+    <button 
+      pButton 
+      class="p-button-raised p-button-text"
+      type="button"
+      label="Create role"
+    ></button>
+  </div>
+
+  <div class="table-direction">
+    <p-table
+        [value]="roles"
+        responsiveLayout="scroll"
+        class="table"
+      >
+        <ng-template pTemplate="header">
+            <tr>
+                <th>NAME</th>
+                <th>PERMISSION</th>
+                <th>ACTIONS</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-role>
+            <tr>
+                <td>{{role?.name}}</td>
+                <td>{{role?.permission}}</td>
+                <td class="template-button">
+                  <button 
+                    pButton
+                    type="button" 
+                    label="EDIT"
+                    class="edit-button p-button-outlined"
+                  ></button>
+                  <button 
+                    pButton
+                    type="button" 
+                    label="DELETE"
+                    class="delete-button p-button-outlined"
+                  ></button>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+  </div>
+
+</div>

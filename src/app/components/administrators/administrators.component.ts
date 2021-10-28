@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IUser } from '../shared/models/user.model';
+import { IUser } from '../../shared/models/user.model';
 
 
 @Component({
@@ -13,13 +13,13 @@ export class AdministratorsComponent implements OnInit {
     {
       name: 'Administrator',
       username: 'admin',
-      email: 'admin@vuedemoapp.com',
+      email: 'admin@angulardemoapp.com',
       role: 'ADMINISTRATOR'
     },
     {
       name: 'Administrator',
       username: 'admin',
-      email: 'admin@vuedemoapp.com',
+      email: 'admin@angulardemoapp.com',
       role: 'ADMINISTRATOR'
     }
   ]
