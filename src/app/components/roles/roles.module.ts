@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RolesRoutingModule } from './roles-routing.module';
 import { RolesComponent } from './roles.component';
 import { ButtonModule } from 'primeng/button';
-
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -13,6 +13,7 @@ import { ButtonModule } from 'primeng/button';
   imports: [
     CommonModule,
     ButtonModule,
+    TableModule,
     RolesRoutingModule
   ],
   exports: [

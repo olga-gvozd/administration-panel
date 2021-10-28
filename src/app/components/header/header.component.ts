@@ -34,8 +34,12 @@ export class HeaderComponent implements OnInit {
         command: $event => { this.router.navigate(['roles']) }
       },
       {
-        label: 'About project',
+        label: 'About',
         command: $event => { this.router.navigate(['about']) }
+      },
+      {
+        label: 'Language',
+        command: $event => { this.router.navigate(['language']) }
       }
   ];
   }
