@@ -40,6 +40,10 @@ export class HeaderComponent implements OnInit {
       {
         label: 'Language',
         command: $event => { this.router.navigate(['language']) }
+      },
+      {
+        label: 'Sign in',
+        command: $event => { this.router.navigate(['auth']) }
       }
   ];
   }

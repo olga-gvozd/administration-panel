@@ -3,9 +3,8 @@
     <h1 class="text-title">Users</h1>
     <button 
       pButton 
-      class="p-button-raised p-button-text"
       type="button"
-      label="Create users"
+      label="ADD"
     ></button>
   </div>
   <p-table
@@ -25,24 +24,21 @@
           <td>{{user?.name}}</td>
           <td>{{user?.username}}</td>
           <td>{{user?.email}}</td>
-          <td class="template-button">
+          <td class="actions">
             <button 
               pButton
               type="button" 
               label="VIEW"
-              class="p-button-outlined"
             ></button>
             <button 
               pButton
               type="button" 
               label="EDIT"
-              class="edit-button p-button-outlined"
             ></button>
             <button 
               pButton
               type="button" 
               label="DELETE"
-              class="delete-button p-button-outlined"
             ></button>
           </td>
       </tr>

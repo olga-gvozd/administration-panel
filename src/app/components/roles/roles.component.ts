@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IRoles } from 'src/app/shared/models/user.model';
+import { IRoles, Perm } from 'src/app/shared/models/user.model';
 
 @Component({
   selector: 'app-roles',
@@ -8,16 +8,25 @@ import { IRoles } from 'src/app/shared/models/user.model';
 })
 export class RolesComponent implements OnInit {
 
- mockup = [
-  {
-    name: 'Administrator',
-    permission: 'VU'
-  }
-] 
+  mockup = [
+    {
+      name: 'Administrator',
+      permission: 'VU'
+    },    
+    {
+      name: 'Administrator',
+      permission: 'VU'
+    },    
+    {
+      name: 'Administrator',
+      permission: 'VU'
+    },
+  ] 
 
   roles: IRoles[] = this.mockup;
+  perm: any[] = Perm;
 
-  
+
   constructor() { }
 
   ngOnInit(): void {
