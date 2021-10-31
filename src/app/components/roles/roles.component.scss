@@ -2,12 +2,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
   border-radius: 5px;
   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 50%);
-  background-color: #fff;
-  color: #212120;
-  font-size: 14px;
   margin-top: 20px;
   padding: 20px;
 
@@ -16,31 +12,27 @@
     justify-content: space-between;
     margin: 0 0 20px;
 
-    .text {
+    .text-role {
       color: #271962;
       font-size: 20px;
     }
   }
-
   .table-direction {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 
     .table {
      width: 60%;
     }
   }
 }
-
-
-.template-button {
+.actions {
   padding: 5px 20px;
   display: flex;
-  justify-content: space-between;
+  gap: 5px;
 }
-.edit-button {
-  border: 1px solid #f67030;
-}
-.delete-button {
-  border: 1px solid #c90404;
+.text {
+  color: #271962;
+  font-size: 20px;
+  margin: 50px 0 20px;
 }

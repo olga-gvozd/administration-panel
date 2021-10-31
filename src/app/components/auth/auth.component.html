@@ -1,0 +1,41 @@
+<div class="auth-container">
+  <div class="action-box">
+    <div class="title">Log in</div>
+
+    <span class="p-float-label">
+      <input 
+        type="text" 
+        id="inputtext" 
+        pInputText
+        class="text"
+      /> 
+      <label for="inputtext">Username</label>
+    </span>
+
+    <span class="p-float-label">
+      <input 
+        type="password" 
+        id="inputtext" 
+        pInputText
+        pPassword
+        [feedback]="false"
+        class="text"
+      /> 
+      <label for="inputtext">Password </label>
+    </span>
+
+    <div>
+      <button
+        class="sign-in" 
+        type="button" 
+        pButton  
+        label="Sign in"
+      ></button>
+  
+      <div class="sentence">If you don't have an account please 
+        <span class="registration">sign in</span>
+      </div>
+    </div>
+  </div>
+</div>
+

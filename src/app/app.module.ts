@@ -4,11 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { MenuModule } from 'primeng/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ButtonModule } from 'primeng/button';
-import { TableModule } from 'primeng/table';
-
+import { PrimengModule } from './shared/libs/primeng/primeng.module';
 
 @NgModule({
   declarations: [
@@ -18,10 +15,8 @@ import { TableModule } from 'primeng/table';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    ButtonModule,
     AppRoutingModule,
-    TableModule,
-    MenuModule
+    PrimengModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
