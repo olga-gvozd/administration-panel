@@ -1,4 +1,4 @@
-<div class="auth-container">
+<div [formGroup]="authForm" class="auth-container">
   <div class="action-box">
     <div class="title">Log in</div>
 
@@ -8,6 +8,7 @@
         id="inputtext" 
         pInputText
         class="text"
+        formControlName="username"
       /> 
       <label for="inputtext">Username</label>
     </span>
@@ -18,10 +19,11 @@
         id="inputtext" 
         pInputText
         pPassword
+        formControlName="password"
         [feedback]="false"
         class="text"
       /> 
-      <label for="inputtext">Password </label>
+      <label for="inputtext">Password</label>
     </span>
 
     <div>
@@ -30,6 +32,7 @@
         type="button" 
         pButton  
         label="Sign in"
+        (click)="signIn()"
       ></button>
   
       <div class="sentence">If you don't have an account please 

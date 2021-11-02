@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AuthRoutingModule } from './auth-routing.module';
 import { AuthComponent } from './auth.component';
 import { PrimengModule } from 'src/app/shared/libs/primeng/primeng.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { PrimengModule } from 'src/app/shared/libs/primeng/primeng.module';
   imports: [
     CommonModule,
     AuthRoutingModule,
+    ReactiveFormsModule,
     PrimengModule
   ],
   exports: [
