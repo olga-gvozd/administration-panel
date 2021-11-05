@@ -37,7 +37,12 @@ const routes: Routes = [
     path: 'language',
     loadChildren:() => import('./components/language/language.module').then(m => m.LanguageModule),
     canActivate: [AuthGuard]
-  }
+  },
+  {
+    path: '**',
+    redirectTo: 'auth',
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
+import { AuthService } from 'src/app/services/auth.service';
+import { PersistService } from 'src/app/services/persist.service';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +14,9 @@ export class HeaderComponent implements OnInit {
   items: MenuItem[] = [];
 
   constructor(
-    private router: Router
+    private readonly router: Router,
+    private readonly authService: AuthService,
+    private readonly persistService: PersistService
   ) { }
 
   ngOnInit(): void {
@@ -42,10 +46,16 @@ export class HeaderComponent implements OnInit {
         command: $event => { this.router.navigate(['language']) }
       },
       {
-        label: 'Sign in',
-        command: $event => { this.router.navigate(['auth']) }
+        label: 'Sign out',
+        command: () => { this.logout() }
       }
-  ];
+    ];
+  }
+
+  logout(): void {
+    this.authService.setLoginStatus(false);
+    this.persistService.clearToken();
+    this.router.navigate(['auth']);
   }
 
 }

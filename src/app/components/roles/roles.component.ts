@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IRoles, Perm } from 'src/app/shared/models/user.model';
+import { IRoles, Perm } from 'src/app/core/models/user.model';
 
 @Component({
   selector: 'app-roles',

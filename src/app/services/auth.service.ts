@@ -1,13 +1,15 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+import { ILoginData, ILoginToken } from '../core/models/auth.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  private logged = true;
+  private logged = false;
 
   constructor(
     private readonly http: HttpClient
@@ -21,9 +23,11 @@ export class AuthService {
     this.logged = status;
   }
 
-  signIn(loginData: any): void {
-    const url = 'localhost:3000/api/auth/login';
-    this.http.post(url, { loginData }).subscribe(data => data);
+  signIn(loginData: ILoginData): Observable<ILoginToken | HttpErrorResponse> {
+    const url = 'api/auth/login';
+    const body = {...loginData, observe: 'response'}
+    return this.http.post<ILoginToken | HttpErrorResponse>(url, body)
+      .pipe(catchError((error: HttpErrorResponse) => of(error)));
   }
 
 }
