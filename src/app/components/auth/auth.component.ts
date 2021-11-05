@@ -25,6 +25,7 @@ export class AuthComponent implements OnInit {
 
   ngOnInit(): void {
     this.initForm();
+    
   }
 
   private initForm(): void {
