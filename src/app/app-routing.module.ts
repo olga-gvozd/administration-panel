@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
-import { AuthComponent } from './components/auth/auth.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -11,7 +11,8 @@ const routes: Routes = [
   },
   {
     path: 'about',
-    component: AboutComponent
+    component: AboutComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'auth',
@@ -19,20 +20,29 @@ const routes: Routes = [
   },
    {
      path: 'administrators',
-     loadChildren:() => import('./components/administrators/administrators.module').then(m => m.AdministratorsModule)
+     loadChildren:() => import('./components/administrators/administrators.module').then(m => m.AdministratorsModule),
+     canActivate: [AuthGuard]
    },
    {
     path: 'users',
-    loadChildren:() => import('./components/users/users.module').then(m => m.UsersModule)
+    loadChildren:() => import('./components/users/users.module').then(m => m.UsersModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'roles',
-    loadChildren:() => import('./components/roles/roles.module').then(m => m.RolesModule)
+    loadChildren:() => import('./components/roles/roles.module').then(m => m.RolesModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'language',
-    loadChildren:() => import('./components/language/language.module').then(m => m.LanguageModule)
-  }
+    loadChildren:() => import('./components/language/language.module').then(m => m.LanguageModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: '**',
+    redirectTo: 'auth',
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({

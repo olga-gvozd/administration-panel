@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PrimengModule } from './shared/libs/primeng/primeng.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { PrimengModule } from './shared/libs/primeng/primeng.module';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    PrimengModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    PrimengModule
   ],
   providers: [],
   bootstrap: [AppComponent]
