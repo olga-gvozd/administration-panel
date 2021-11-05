@@ -25,11 +25,11 @@ export class AuthComponent implements OnInit {
 
   ngOnInit(): void {
     this.initForm();
+    
   }
 
   private initForm(): void {
     this.authForm = this.formBuilder.group({
-      //Validators.pattern('[- +0-9]+')
       username: [null],
       password: [null]
     });
