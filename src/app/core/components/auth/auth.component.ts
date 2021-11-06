@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ILoginToken } from 'src/app/core/models/auth.model';
-import { AuthService } from 'src/app/services/auth.service';
-import { PersistService } from 'src/app/services/persist.service';
+import { AuthService } from 'src/app/core/services/auth.service';
+import { PersistService } from 'src/app/core/services/persist.service';
 import { tap } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';

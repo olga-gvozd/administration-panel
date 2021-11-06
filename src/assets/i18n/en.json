@@ -1,0 +1,14 @@
+{
+  "header": {
+    "title": "Administration panel"
+  },
+
+  "login": {
+    "login": "Log in",
+    "username": "User name",
+    "password": "Password",
+    "sign-in": "Sing in",
+    "no-account": "If you don't have an account please",
+    "sign-up": "sign un."
+  }
+}

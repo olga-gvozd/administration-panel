@@ -1,0 +1,36 @@
+<div class="header-container">
+  <div>
+    <div class="header-container__title">
+      {{ 'header.title' | translate }}
+    </div>
+  </div>
+
+  <div class="header-container__actions">
+    <div class="header-container__lang">
+      <p-dropdown [options]="languageMenu" (onChange)="changeLang($event)" [autoDisplayFirst]="true">
+        <ng-template pTemplate="selectedItem">
+          <div class="language-item">
+            <img [src]="'./../../../../assets/images/languages/'+selectedLanguage+'.png'" class="flag"/>
+            <div class="label">{{selectedLanguage.toUpperCase()}}</div>
+          </div>
+        </ng-template>
+        <ng-template let-lang pTemplate="item">
+          <div class="language-item">
+            <img [src]="'./../../../../assets/images/languages/'+lang+'.png'" class="flag"/>
+            <div class="label">{{lang.toUpperCase()}}</div>
+          </div>
+        </ng-template>
+      </p-dropdown>
+    </div>
+    
+    <div class="header-container__menu">
+      <p-menu #menu [popup]="true" [model]="itemsMenu"></p-menu>
+      <button 
+        type="button" 
+        pButton icon="pi pi-chevron-down" 
+        (click)="menu.toggle($event)"
+      ></button>
+      
+    </div>
+  </div>
+</div>
