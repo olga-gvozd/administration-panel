@@ -1,0 +1,43 @@
+:host {
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+
+  &__title {
+    color: #4baaf5;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 12px;
+  }
+}
+
+.language-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .flag {
+    height: 15px;
+  }
+
+  .label {
+    font-size: 15px;
+  }
+}
+
+:host ::ng-deep {
+  .p-dropdown-label {
+    padding-right: 0;
+  }
+}

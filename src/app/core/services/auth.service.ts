@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { ILoginData, ILoginToken } from '../core/models/auth.model';
+import { ILoginData, ILoginToken } from '../models/auth.model';
 
 @Injectable({
   providedIn: 'root'

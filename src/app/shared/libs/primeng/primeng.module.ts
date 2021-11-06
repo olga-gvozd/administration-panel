@@ -5,6 +5,7 @@ import { MenuModule } from 'primeng/menu';
 import { TableModule } from 'primeng/table';
 import { PasswordModule } from 'primeng/password';
 import { InputTextModule } from 'primeng/inputtext';
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { InputTextModule } from 'primeng/inputtext';
     MenuModule,
     PasswordModule,
     ButtonModule,
+    DropdownModule,
     InputTextModule
   ]
 })

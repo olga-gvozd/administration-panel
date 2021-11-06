@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './components/about/about.component';
-import { AuthGuard } from './guards/auth.guard';
+import { AboutComponent } from './core/components/about/about.component';
+import { AuthGuard } from './core/guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -16,26 +16,26 @@ const routes: Routes = [
   },
   {
     path: 'auth',
-    loadChildren:() => import('./components/auth/auth.module').then(m => m.AuthModule)
+    loadChildren:() => import('./core/components/auth/auth.module').then(m => m.AuthModule)
   },
    {
      path: 'administrators',
-     loadChildren:() => import('./components/administrators/administrators.module').then(m => m.AdministratorsModule),
+     loadChildren:() => import('./core/components/administrators/administrators.module').then(m => m.AdministratorsModule),
      canActivate: [AuthGuard]
    },
    {
     path: 'users',
-    loadChildren:() => import('./components/users/users.module').then(m => m.UsersModule),
+    loadChildren:() => import('./core/components/users/users.module').then(m => m.UsersModule),
     canActivate: [AuthGuard]
   },
   {
     path: 'roles',
-    loadChildren:() => import('./components/roles/roles.module').then(m => m.RolesModule),
+    loadChildren:() => import('./core/components/roles/roles.module').then(m => m.RolesModule),
     canActivate: [AuthGuard]
   },
   {
     path: 'language',
-    loadChildren:() => import('./components/language/language.module').then(m => m.LanguageModule),
+    loadChildren:() => import('./core/components/language/language.module').then(m => m.LanguageModule),
     canActivate: [AuthGuard]
   },
   {

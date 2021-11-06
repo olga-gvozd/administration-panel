@@ -28,6 +28,13 @@
     .sentence {
       font-size: 14px;
       margin: 10px 0;
+      span {
+        &:first-child {
+          margin-right: 4px;
+          font-size: 13px;
+        }
+      }
+
 
       .registration {
         color: darkslateblue;

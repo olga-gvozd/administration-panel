@@ -1,6 +1,6 @@
 <div [formGroup]="authForm" class="auth-container">
   <div class="action-box">
-    <div class="title">Log in</div>
+    <div class="title">{{ 'login.login' | translate }}</div>
 
     <span class="p-float-label">
       <input 
@@ -10,7 +10,7 @@
         class="text"
         formControlName="username"
       /> 
-      <label for="inputtext">Username</label>
+      <label for="inputtext">{{ 'login.username' | translate }}</label>
     </span>
 
     <span class="p-float-label">
@@ -23,7 +23,7 @@
         [feedback]="false"
         class="text"
       /> 
-      <label for="inputtext">Password</label>
+      <label for="inputtext">{{ 'login.password' | translate }}</label>
     </span>
 
     <div>
@@ -35,8 +35,9 @@
         (click)="signIn()"
       ></button>
   
-      <div class="sentence">If you don't have an account please 
-        <span class="registration">sign in</span>
+      <div class="sentence">
+        <span>{{ 'login.no-account' | translate }}</span>  
+        <span class="registration">{{ 'login.sign-up' | translate }}</span>
       </div>
     </div>
   </div>
